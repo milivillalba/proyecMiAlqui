@@ -1,0 +1,12 @@
+.contenedorHeader{
+    border-radius: 4px; 
+}
+
+@media (min-width: 768px){
+.float-md-start {
+    float: left!important;
+}
+}
+.cover-container {
+    max-width: 42em;
+}

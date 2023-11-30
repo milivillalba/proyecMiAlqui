@@ -1,0 +1,122 @@
+.nav {
+  display: flex;
+  max-width: 992px; /*para que se centre  los link del menu al medio*/
+  margin: 0 auto; /*quede todo centrado 0 arri y abaj/ auto iz y derech*/
+  margin: 40px;
+}
+
+.nav-link {
+  text-decoration: none !important;
+  margin: 20px;
+  color: rgb(21, 23, 28) !important;
+  font-family: "Times New Roman", Times, serif;
+  width: max-content; /*para que no me corte el contenido*/
+}
+.navbar-brand {
+  text-decoration: none !important;
+}
+.logo > h1 {
+  color: rgb(21, 23, 28) !important;
+  padding-left: 20px;
+}
+.logo > h1 > span {
+  color: rgb(252, 4, 68) !important;
+}
+.container-fluid {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-link {
+  text-decoration: none;
+}
+.bg-body-tertiary {
+  --bs-bg-opacity: 1;
+  background-color: rgba(
+    var(--bs-tertiary-bg-rgb),
+    var(--bs-bg-opacity)
+  ) !important;
+}
+.enlace-nav {
+  text-decoration: none !important;
+  margin: 20px;
+  color: rgb(21, 23, 28) !important;
+  font-family: "Times New Roman", Times, serif;
+  width: max-content; /*para que no me corte el contenido*/
+}
+/*el de registrarce*/
+.nav-link {
+  color: rgb(21, 23, 28) !important;
+  padding-top: 0px !important;
+}
+.nav-link:hover {
+  box-shadow: 0 0 5px rgb(252, 4, 68), 0 0 25px rgb(252, 4, 68),
+    0 0 50px rgb(252, 4, 68), 0 0 100px rgb(252, 4, 68);
+  border-radius: 20px !important;
+}
+.nav {
+  display: grid;
+  display: flex;
+  justify-content: space-between;
+  max-width: 992px; /*para que se centre tos los link del menu al medio*/
+  margin: 0 auto;
+}
+.listas-estilo {
+  display: flex; /*quede en forma orizontal todo los linkd del menu*/
+  margin-right: 20px; /*queden separados entre ellos desde la derecha*/
+  list-style: none; /*borrar los puntitos que tienen la listas por defectos*/
+  padding-left: 50%;
+}
+a {
+  text-decoration: none;
+  color: rgb(68, 66, 66);
+}
+nav.bg-body-tertiary {
+  background: none !important;
+}
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+}
+:root {
+  --bs-breakpoint-xs: 0;
+  --bs-breakpoint-sm: 576px;
+  --bs-breakpoint-md: 768px;
+  --bs-breakpoint-lg: 992px;
+  --bs-breakpoint-xl: 1200px;
+  --bs-breakpoint-xxl: 1400px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+nav.bg-body-tertiary {
+  background: none !important;
+}
+.navbar-toggler {
+  padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+  font-size: var(--bs-navbar-toggler-font-size);
+  line-height: 1;
+  color: var(--bs-navbar-color);
+  background-color: transparent;
+  border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+  border-radius: var(--bs-navbar-toggler-border-radius);
+  transition: var(--bs-navbar-toggler-transition);
+}
+@media (max-width: 1199px) {
+  .botones-alineacion {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
