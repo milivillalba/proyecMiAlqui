@@ -21,7 +21,9 @@ const io = new SocketServer(httpServer);
 //conexiones de carpetas
 import { environments } from "./conf/environments.js";
 
+
 //rutas
+
 
 //importar configuracion de la bd
 import { sequelize } from "./conf/db.js";
@@ -81,6 +83,8 @@ sequelize
 
 //rutas
 app.use(router);
+
+
 
 // Middleware para validar JWT en conexiones WebSocket
 io.use((socket, next) => {

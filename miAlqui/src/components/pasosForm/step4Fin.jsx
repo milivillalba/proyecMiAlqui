@@ -7,7 +7,7 @@ import { fetchAlojamiento } from "../../api/alojamientoApi";
 export const Step4 = () => {
   const { step1Data, step2Data, step3Data ,prevStep} = useFormContext();
   const navigate = useNavigate();
-const {stepForm:formData, handleInputChange, reset}= useForm({
+const {stepForm, handleInputChange}= useForm({
         name: "",
         lastName:"",
         dni: "",
@@ -53,7 +53,7 @@ const {stepForm:formData, handleInputChange, reset}= useForm({
         descripcionTotal: step2Data.descripcionTotal,
         filename: step3Data.filename,
       });
-      const responseAloj = await fetchAlojamiento("api/alojamiento", "POST", formData);
+      const responseAloj = await fetchAlojamiento("api/alojamiento", "POST",  { ...step1Data, ...step2Data, ...step3Data } );
       
       //mostra la respuesta
     
@@ -78,12 +78,13 @@ const {stepForm:formData, handleInputChange, reset}= useForm({
 };
 
   return (
-    <>
+    <form onSubmit={handleButtonClick}>
      
       <h3 className="applicationFormContainer-tittle">Confirmar y Enviar</h3>
       {/* Muestra los datos anteriores para confirmación */}
       <div className="datosCargados">
       <div className="pasoContainer">
+        
         <ul className="uldatosCargados"><h4 className="h4DatosCargado">Datos del Paso 1:</h4>
             <li><b>Nombre:</b> {step1Data.name}</li>
             <li><b>Apellido:</b> {step1Data.lastName}</li>
@@ -125,15 +126,10 @@ const {stepForm:formData, handleInputChange, reset}= useForm({
 
       <hr />
       <hr />
-      <input
-        type="button"
-        id="submit"
+      <button
+        type="submit"
         className="fullwidth submit campo"
-        placeholder="Guardar y Continuar"
-        value="Guardar y Continuar"
-        required
-        onClick={handleButtonClick}
-      />
+      >Enviar</button>
 
       {/*anterior */}
       <input
@@ -146,6 +142,6 @@ const {stepForm:formData, handleInputChange, reset}= useForm({
             required
           />
     
-    </>
+    </form>
   );
 };

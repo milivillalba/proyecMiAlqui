@@ -6,7 +6,7 @@ import { ArticleList, ButtonList } from "../../components/filters";
 import data from "../../data/data";
 import { Footer } from "../../components/footer/Footer";
 import { Link } from "react-router-dom";
-import { BontonContact } from "../../components/contact/BotonContac";
+
 
 export const Main = () => {
   const allCategories = [
@@ -131,7 +131,7 @@ export const Main = () => {
 
        
       </main>
-      <BontonContact/>
+      
       <Footer/>
     </>
   );

@@ -33,14 +33,15 @@ export const CtrlCreateAlojamiento = async (req, res) => {
 
   
   try {
+    
     const file = req.files.filename;
 
     // Validar si el archivo existe
-    if (!file) {
-      throw {
-        message: "Archivo no encontrado en la solicitud"
-      };
-    }
+    // if (!file) {
+    //   throw {
+    //     message: "Archivo no encontrado en la solicitud"
+    //   };
+    // }
     //se crea una nueva publicacion del alojamiento
     const NewpublicacionAlojamiento = await AlojamientoModel.create({
       //asignar las llaves foraneas
@@ -70,7 +71,10 @@ export const CtrlCreateAlojamiento = async (req, res) => {
     };
    }
 
-    let path = `src/Archivos/${file.name}`;//la variable path contiene una cadena de texto, esa cadena es una ruta de archivo que compone "src/Archivo" y el nombre del archivo( osea de la imagen )"file.name"
+   
+    let path = `src/Archivos/${file.name}`;//la variable path contien una ruta de archivo que compone "src/Archivo" y el nombre del archivo( osea de la imagen )"file.name"
+    
+    // Mover el archivo a la ruta especificada
     file.mv(path, (err) => {
       if (err) {
         return res.status(500).json({

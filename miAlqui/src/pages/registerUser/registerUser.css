@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Oswald:wght@400;700&family=Raleway:wght@100;300;400;700&display=swap');
-*{
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Oswald:wght@400;700&family=Raleway:wght@100;300;400;700&display=swap'); */
+/* *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;;
-}
+} */
 
 :root{
   --primaryColor: hsl(221, 62%, 65%);
@@ -46,11 +46,11 @@ a{
 li{
   list-style: none;
 }
-.icon{
+.icon-regis{
   font-size: var(--blackColor);
   cursor: pointer;
 }
-img, video{
+.imgregi, video{
   height: auto;
   width: 100%;
 }
@@ -66,7 +66,7 @@ img, video{
   text-align: center;
 }
 
-.btn{
+.btn-regis{
   border: none;
   outline: none;
   padding: .8rem 1rem;
@@ -75,16 +75,16 @@ img, video{
   border-radius: 8px;
 }
 
-.btn .icon{
+.btn-regis .icon-regis{
   margin-left: .5rem;
 }
 
-.btn:hover{
+.btn-regis:hover{
   color: var(--primaryColor);
   background-color:var(--paleGreen);
 }
 
-body{
+.body-register{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,10 +97,9 @@ body{
   width: 100%;
   margin: auto;
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: 0 7px 50px rgb(19, 117, 134);
 
-  .contanier{
+  .contanier-register{
       height: 75vh;
       width: 60%;
       margin: auto;
@@ -120,7 +119,7 @@ body{
         flex-direction: column;
         margin: auto;
         border-radius: 10px;
-        overflow: hidden;
+        
         
         video, .footerDiv{
           position: absolute;
@@ -137,7 +136,7 @@ body{
         .textDiv{
           position: relative;
 
-          .title{
+          .title-regis{
             color: var(--whiteColor);
             font-size: 40px;
             font-weight: 900;
@@ -155,11 +154,11 @@ body{
           border-radius: 10px;
 
 
-          .text{
+          .text-regis{
             color: var(--whiteColor);
           }
 
-          .btn{
+          .btn-regis{
             background: var(--whiteColor);
             color: var(--paleGreen);
             padding: .8rem 1.5rem;
@@ -186,7 +185,7 @@ body{
           text-align: center;
           padding: 1.5rem;
 
-          img{
+          .imgregi{
             width: 60px;
             padding-bottom: .5rem;
           }
@@ -198,7 +197,7 @@ body{
         }
       }
 
-      .form{
+      .form-register{
         gap: 1rem;
 
         .inputDiv{
@@ -206,14 +205,14 @@ body{
             color: var(--greyText);
           }
 
-          input{
+          .inputRegistro{
             background: none;
             outline: none;
             border: none;
             width: 200px;
           }
 
-          label{
+          .label-register{
             color: var(--blackColor);
             font-weight: 400;
             font-size: 14px;
@@ -221,14 +220,14 @@ body{
             display: block;
           }
 
-          .input{
+          .input-regis{
             gap: .5rem;
             padding: 1rem;
             background: var(--inputColor);
             border-radius: 10px;
           }
         }
-        .btn{
+        .btn-regis{
           padding: .8rem;
           background: var(--blackColor);
           border-radius: 10px;
@@ -241,7 +240,7 @@ body{
           gap: .5rem;
           transition: .3s ease;
 
-          .icon{
+          .icon-regis{
             font-size: 25px;
             transition: .3s ease;     
           }
@@ -250,7 +249,7 @@ body{
             background: var(--hoverColor);
             color: var(--blackColor);
 
-            .icon{
+            .icon-regis{
               color: var(--blackColor);
               transform: translateX(5px);
             }
@@ -283,13 +282,13 @@ body{
     height: 95vh;
     width: 95%;
     border-radius: 10px;
-    overflow: hidden;
+    
     box-shadow: 0 5px 10px rgb(240, 200, 200);
 
   }
 }
 
-.contanier{
+.contanier-register{
   position: relative;
   width: 95vw;
   height: 95vw;
@@ -297,7 +296,7 @@ body{
   align-items: center;
   justify-content: center;
   background: var(--blackColor);
-  overflow: hidden;
+  
   border-radius: 1rem;
   box-shadow: 2px 2px 8px var(--greyText);
 }
@@ -329,10 +328,10 @@ body{
 
 @media screen and (max-width: 678px) {
   .loginPage, .registerPage{
-    .contanier{
+    .contanier-register{
       .gifDiv{
         .textDiv{
-          .title{
+          .title-regis{
             font-size: 25px;
           }
 
@@ -346,7 +345,7 @@ body{
             font-size: 12px;
           }
 
-          .btn{
+          .btn-regis{
             padding: 8rem 1.5rem;
           }
         }
@@ -381,7 +380,7 @@ body{
 
 @media screen and (max-width: 927px) {
   .loginPage, .registerPage{
-    .contanier{
+    .contanier-register{
       width: 85 ;
     }
   }
@@ -396,13 +395,13 @@ body{
 /*# sourceMappingURL=App.css.map */
 
 /*app.scss*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Oswald:wght@400;700&family=Raleway:wght@100;300;400;700&display=swap');
-*{
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Oswald:wght@400;700&family=Raleway:wght@100;300;400;700&display=swap'); */
+/* *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;;
-}
+} */
 
 :root{
     --primaryColor: hsl(84, 55%, 56%);
@@ -435,9 +434,7 @@ body{
 
 }
 
-html{
-    font-size: 90%;
-}
+
 
 a{
     text-decoration: none;
@@ -445,11 +442,11 @@ a{
 li{
     list-style: none;
 }
-.icon{
+.icon-regis{
     font-size: var( --h2FontSize);
     cursor: pointer;
 }
-img, video{
+.imgregi, video{
     height: auto;
     width: 100%;
 }
@@ -465,7 +462,7 @@ img, video{
     text-align: center;
 }
 
-.btn{
+.btn-regis{
     border: none;
     outline: none;
     padding: .8rem 1rem;
@@ -474,11 +471,11 @@ img, video{
     border-radius: 8px;
 }
 
-.btn .icon{
+.btn-regis .icon-regis{
     margin-left: .5rem;
 }
 
-.btn:hover{
+.btn-regis:hover{
     color: var(--primaryColor);
     background-color:var(--paleGreen);
 }
@@ -489,6 +486,7 @@ img, video{
     margin: auto;
     border-radius: 10px;
     overflow: hidden;
+    
     box-shadow: 0 7px 50px rgb(214, 223, 213);
 
     .contanier{
@@ -501,5 +499,5 @@ img, video{
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Oswald:wght@400;700&family=Raleway:wght@100;300;400;700&display=swap');
-/*# sourceMappingURL=App.min.css.map */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Oswald:wght@400;700&family=Raleway:wght@100;300;400;700&display=swap');
+# sourceMappingURL=App.min.css.map */

@@ -15,6 +15,9 @@ import {
 routerAloj.get("/api/alojamiento", CtrlGetAllAlojamiento);
 
 routerAloj.get("/api/alojamiento/:id", CtrlAllIdAlojamiento);
+routerAloj.get("/api/prueba",(req,res)=>{
+  res.json("prueba lista");
+})
 
 //crear un alojamiento
 

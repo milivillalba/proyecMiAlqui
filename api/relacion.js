@@ -20,15 +20,10 @@ sequelize.models = {
   TipoAlojamientoModel,
  
 };
-// const genero= [
-//   { edad: "Menor de 15 años" },
-//   { edad: "Entre 16 y 21 años" },
-//   { edad: "Entre 22 y 27 años" },
-// ];
 
 sequelize.sync({ force: false }).then(() => {
   console.log("Tablas creadas");
-  // SysFormEdadModel.bulkCreate(edad);
+  
   app.listen(port, () => {
     console.log(`Servidor en ejecución en http://localhost:${port}`);
   });

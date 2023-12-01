@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 const FormContext = createContext();
 
@@ -105,7 +105,7 @@ export const FormProvider = ({ children }) => {
             <div className="step">
               <span className={stylenumber3.join(" ")}>3</span>
               <h3 className={styletitle3.join(" ")}>Fotos y Videos</h3>
-            </div>
+            </div> 
             <div className="step">
               <span className={stylenumber4.join(" ")}>4</span>
               <h3 className={styletitle4.join(" ")}>Terminos y Condiciones</h3>

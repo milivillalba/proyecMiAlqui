@@ -73,37 +73,37 @@ export const RegisterPage = () => {
   
   return (
     <div className='registerPage flex '>
-      <div className="contanier flex">
+      <div className="contanier-register flex">
         <div className=" gifDiv">
         <video src={video} autoPlay muted loop  ></video>
 
           <div className='textDiv'>
-              <h2 className='title'> Create un usuario para poder ver más informacion</h2>
+              <h2 className='title-regis'> Create un usuario para poder ver más informacion</h2>
               <p>Alquilar ahora es más facil con MIALQUI</p>
           </div>
 
           <div className='footerDiv flex'>
-             <span className='text'>Tengo una cuenta</span>
+             <span className='text-regis'>Tengo una cuenta</span>
             <Link to= {'/'}>
-              <button className='btn'>Login</button>
+              <button className='btn-regis'>Login</button>
            </Link>
       </div>
       </div>
       <div className='formDiv flex'>
         <div className='headerDiv'>
-           <img src= {logo} alt="Logo Imagen" />
-           <h3>Registrate y explora</h3>
+           <img src= {logo} alt="Logo Imagen" className="imgregi"/>
+           <h1>Bienvenido a MIALQUI</h1>
          </div>
           <form onSubmit={handleSubmit} action="" className='form grid'>
 
           <div className="inputDiv">
-            <label htmlFor='username'>Usuario</label>
-            <div className="input flex">
-            <MdMarkEmailRead className='icon'/>
+            <label htmlFor='username' className="label-register">Usuario</label>
+            <div className="input-regis flex">
+            <MdMarkEmailRead className='icon-regis'/>
             <input
               type="username"
               id='username'
-              className=''
+              className='input-regis'
               placeholder='Ingrese usuario'
               onChange={handleInputChange}
               value={values.username}
@@ -114,8 +114,8 @@ export const RegisterPage = () => {
             
          <div className="inputDiv">
            <label htmlFor='email'>Email</label>
-           <div className="input flex">
-           <MdMarkEmailRead className='icon'/>
+           <div className="input-regis flex">
+           <MdMarkEmailRead className='icon-regis'/>
             <input
               type="email"
               id='email'
@@ -130,10 +130,11 @@ export const RegisterPage = () => {
 
          <div className="inputDiv">
            <label htmlFor='password'>Password</label>
-           <div className="input flex">
-           <BsFillShieldLockFill className='icon'/>
+           <div className="input-regis flex">
+           <BsFillShieldLockFill className='icon-regis'/>
             <input
               type="password"
+              id='password'
               className=''
               placeholder='Ingrese contraseña'
               onChange={handleInputChange}
@@ -143,9 +144,9 @@ export const RegisterPage = () => {
             </div>
          </div>
 
-            <button type="submit" className='btn flex '>
+            <button type="submit" className='btn-regis flex '>
             <samp>Registro</samp>
-            <AiOutlineSwapRight className='icon'/>
+            <AiOutlineSwapRight className='icon-regis'/>
             </button>
             <samp className='forgotPassword'>
              Olvidaste tu contraseña? <a href="">Click Aquí</a>

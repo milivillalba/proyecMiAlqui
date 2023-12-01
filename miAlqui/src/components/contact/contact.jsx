@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { Header } from "../header/header";
 import { Footer } from "../footer/Footer";
+import Swal from 'sweetalert2';
 
 export const Contact = () => {
 const form = useRef();
@@ -38,16 +39,26 @@ inputs.forEach((input) => {
         "template_unhwo0k",
         form.current,
         "TleDato1ymybBY-p-"
-      )
-      .then(
+      ) .then(
         (result) => {
           console.log(result.text);
+          Swal.fire({
+            icon: 'success',
+            title: 'Correo enviado',
+            text: '¡Tu correo se ha enviado correctamente!',
+          });
         },
         (error) => {
           console.log(error.text);
+          Swal.fire({
+            icon: 'error',
+            title: 'Error al enviar el correo',
+            text: 'Hubo un problema al enviar el correo. Por favor, inténtalo de nuevo.',
+          });
         }
       );
     e.target.reset();
+  
   };
 
   return (
