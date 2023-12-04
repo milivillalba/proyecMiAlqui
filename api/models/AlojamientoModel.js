@@ -26,10 +26,10 @@ export const AlojamientoModel = sequelize.define(
     lugaresSercanos: DataTypes.TEXT,
     tituloAlojamiento: DataTypes.STRING,
     descripcion: DataTypes.TEXT,
-    converImage: {type:DataTypes.STRING,
-      defaultValue: "imagen"
-    }
-    ,
+    converImage:DataTypes.STRING,
+     
+    
+    
     
   },
   {

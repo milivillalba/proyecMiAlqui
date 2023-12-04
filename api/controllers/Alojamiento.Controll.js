@@ -1,6 +1,11 @@
 import { AlojamientoModel } from "../models/AlojamientoModel.js";
 
 import { TipoAlojamientoModel } from "../models/TipoAlojamientoModel.js";
+import express from 'express';
+const router = express.Router();
+import fileUpload from 'express-fileupload';
+
+router.use(fileUpload());
 
 
 //COntrol para cargar un nuevo alojamiento
@@ -25,8 +30,6 @@ export const CtrlCreateAlojamiento = async (req, res) => {
     lugaresCerca,
     title,
     descripcionTotal,
-    filename
-    
     
     
   } = req.body;
@@ -65,12 +68,12 @@ export const CtrlCreateAlojamiento = async (req, res) => {
       descripcion: descripcionTotal,
       converImage: file.name,
     });
-   if(!NewpublicacionAlojamiento){
-    throw{
-      message: "Error al Crear El Alojamiento"
+    if (!NewpublicacionAlojamiento) {
+      return res.status(500).json({
+        msg: "Error al crear el alojamiento",
+      });
     };
-   }
-
+   
    
     let path = `src/Archivos/${file.name}`;//la variable path contien una ruta de archivo que compone "src/Archivo" y el nombre del archivo( osea de la imagen )"file.name"
     
@@ -84,6 +87,7 @@ export const CtrlCreateAlojamiento = async (req, res) => {
       }
 
       console.log("archivo subido");
+      
 
       // Envía la respuesta después de subir el archivo
       res.json({
