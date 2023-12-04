@@ -39,7 +39,7 @@ export const Main = () => {
           <h1 className="tex-aling">
             <span className="tex-1 tex-color">Tu nuevo Hogar</span>
             <span className="tex-1 tex-color">te esta Esperando</span>
-            <img src="./img/background-image.webp" alt="" class=" imagen " />
+            <img src="/img/background-image.webp" alt="" class=" imagen " />
           </h1>
           <span>
             <p class="parrafo tex-color">

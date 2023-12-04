@@ -1,15 +1,10 @@
 import React, { useState } from "react";
 import { useFormContext } from "../../context/FormContext";
 
-import { useForm } from "../../hook/useForm";
-
-
 
 export const Step3 = () => {
-  const {stepForm: step3Data, handleInputChange} = useForm({
-     files:[],
-  }) 
-  const { step1Data, step2Data, nextStep, prevStep, stepsCounter } =
+  
+  const { step1Data, step2Data,step3Data, nextStep, prevStep, stepsCounter } =
     useFormContext();
     
   console.log(step1Data, step2Data);
@@ -63,7 +58,7 @@ export const Step3 = () => {
       <div className="applicationFormContainer">
         <h3 className="applicationFormContainer-tittle">Imagen </h3>
 
-        <form id="form" className="form">
+        <form id="form" className="form" encType="multipart/form-data">
           <input
             className="imput-img"
             type="file"

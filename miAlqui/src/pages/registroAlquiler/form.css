@@ -287,3 +287,18 @@ h4.h4DatosCargado{
   margin-top: 0;
  color: rgb(252, 4, 68);
 }
+/* Upload */
+.uploadPicturesWrapper div {
+  justify-content: flex-start !important;
+}
+
+.uploadPictureContainer {
+  width: 200px !important;
+  height: auto !important;
+  margin: 2% 5% !important;
+  padding: 10px !important;
+}
+
+.uploadPictureContainer img {
+  height: 200px !important;
+}

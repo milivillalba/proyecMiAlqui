@@ -1,33 +1,13 @@
 import React from "react";
 import { useFormContext } from "../../context/FormContext";
 import { useNavigate } from "react-router-dom";
-import { useForm } from "../../hook/useForm";
+
 import Swal from 'sweetalert2';
 import { fetchAlojamiento } from "../../api/alojamientoApi";
 export const Step4 = () => {
   const { step1Data, step2Data, step3Data ,prevStep} = useFormContext();
   const navigate = useNavigate();
-const {stepForm, handleInputChange}= useForm({
-        name: "",
-        lastName:"",
-        dni: "",
-        email:"",
-        numberCui: "",
-        telefono: "",
-        tipoAlojamiento: "",
-        cantDormitorios: "",
-        cantBanios: "",
-        precio: "",
-        barrio: "",
-        calle: "",
-        equipamiento:"",
-        servicios: "",
-        proteccion: "",
-        lugaresCerca: "",
-        title: "",
-        descripcionTotal: "",
-        filename: [],
-});
+
   const handleButtonClick = async(e) => {
     e.preventDefault();
     // Puedes enviar todos los datos al servidor desde aquí
