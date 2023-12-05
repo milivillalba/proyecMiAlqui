@@ -1,11 +1,11 @@
 import { AlojamientoModel } from "../models/AlojamientoModel.js";
 
 import { TipoAlojamientoModel } from "../models/TipoAlojamientoModel.js";
-import express from 'express';
-const router = express.Router();
-import fileUpload from 'express-fileupload';
+// import express from 'express';
+// const router = express.Router();
+// import fileUpload from 'express-fileupload';
 
-router.use(fileUpload());
+// router.use(fileUpload());
 
 
 //COntrol para cargar un nuevo alojamiento
@@ -37,7 +37,7 @@ export const CtrlCreateAlojamiento = async (req, res) => {
   
   try {
     
-    const file = req.files.filename;
+    // const file = req.files.filename;
 
     // Validar si el archivo existe
     // if (!file) {
@@ -66,7 +66,7 @@ export const CtrlCreateAlojamiento = async (req, res) => {
       lugaresSercanos: lugaresCerca,
       tituloAlojamiento: title,
       descripcion: descripcionTotal,
-      converImage: file.name,
+      // converImage: file.name,
     });
     if (!NewpublicacionAlojamiento) {
       return res.status(500).json({
@@ -75,26 +75,26 @@ export const CtrlCreateAlojamiento = async (req, res) => {
     };
    
    
-    let path = `src/Archivos/${file.name}`;//la variable path contien una ruta de archivo que compone "src/Archivo" y el nombre del archivo( osea de la imagen )"file.name"
+    // let path = `src/Archivos/${file.name}`;//la variable path contien una ruta de archivo que compone "src/Archivo" y el nombre del archivo( osea de la imagen )"file.name"
     
     // Mover el archivo a la ruta especificada
-    file.mv(path, (err) => {
-      if (err) {
-        return res.status(500).json({
-          msg: "Error al subir el archivo",
-          error: err.message
-        });
-      }
+    // file.mv(path, (err) => {
+    //   if (err) {
+    //     return res.status(500).json({
+    //       msg: "Error al subir el archivo",
+    //       error: err.message
+    //     });
+    //   }
 
-      console.log("archivo subido");
+    //   console.log("archivo subido");
       
 
-      // Envía la respuesta después de subir el archivo
-      res.json({
-        msg: "Se publicó el alojamiento correctamente",
-        NewpublicacionAlojamiento,
-      });
-    });
+    //   // Envía la respuesta después de subir el archivo
+    //   res.json({
+    //     msg: "Se publicó el alojamiento correctamente",
+    //     NewpublicacionAlojamiento,
+    //   });
+    // });
 
   } catch (error) {
     console.log(error);
@@ -106,7 +106,7 @@ export const CtrlCreateAlojamiento = async (req, res) => {
 //para traer todas las publicaciones
 
 export const CtrlGetAllAlojamiento = async (req, res) => {
-  try {
+  try { 
     const alojamientos = await AlojamientoModel.findAll();
     return res.json(alojamientos);
   } catch (error) {

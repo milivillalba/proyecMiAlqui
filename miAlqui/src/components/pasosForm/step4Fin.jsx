@@ -33,10 +33,9 @@ export const Step4 = () => {
         descripcionTotal: step2Data.descripcionTotal,
         filename: step3Data.filename,
       });
-      const responseAloj = await fetchAlojamiento("api/alojamiento", "POST",  { ...step1Data, ...step2Data, ...step3Data } );
+      const responseAloj = await fetchAlojamiento("api/alojamiento", "POST",  { ...step1Data, ...step2Data } );
       
       //mostra la respuesta
-    
     console.log('Respuesta del servidor',responseAloj);
     Swal.fire({
       icon: "success",
