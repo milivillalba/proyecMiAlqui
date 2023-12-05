@@ -41,14 +41,14 @@ export const SocketProvider = ({ children }) => {
     }, [authState.logged, desconectarSocket])
 
 
-    useEffect(() => {
-        socket?.on('list-users', listaUsuarios => {
-            dispatch({
-                type: types.LISTAR_USUARIOS,
-                payload: listaUsuarios
-            })
-        })
-    }, [socket])
+    // useEffect(() => {
+    //     socket?.on('list-users', listaUsuarios => {
+    //         dispatch({
+    //             type: types.LISTAR_USUARIOS,
+    //             payload: listaUsuarios
+    //         })
+    //     })
+    // }, [socket])
 
 
     return (

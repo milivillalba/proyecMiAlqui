@@ -21,15 +21,14 @@ sequelize.models = {
  
 };
 
-sequelize.sync({ force: false }).then(() => {
-  console.log("Tablas creadas");
-  
-  app.listen(port, () => {
-    console.log(`Servidor en ejecución en http://localhost:${port}`);
+export function connectDB () {
+  sequelize.sync({ force: false }).then(() => {
+    console.log("Tablas creadas");
   });
-});
+
+}
+
 export default {
   AlojamientoModel,
-  TipoAlojamientoModel,
- 
+  TipoAlojamientoModel
 };

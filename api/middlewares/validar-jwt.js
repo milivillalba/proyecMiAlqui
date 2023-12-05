@@ -1,5 +1,6 @@
 import jwt from 'jsonwebtoken';
 import '../conf/db.js'
+import { environments } from '../conf/environments.js';
 
 export const validarJWT = (req, res, next) => {
 
@@ -37,7 +38,7 @@ export const validarJWT = (req, res, next) => {
 export const validarJWTWebsocket = (token) => {
 
     try {
-        const { uid } = jwt.verify(token, env.JWT_ACCESS_SECRET);
+        const { uid } = jwt.verify(token, environments.SECRET);
        
         if(uid) {
             return [ true, uid ]

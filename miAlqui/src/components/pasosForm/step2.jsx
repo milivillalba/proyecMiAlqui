@@ -15,7 +15,7 @@ export const Step2 = () => {
         <h3 className="applicationFormContainer-tittle">
           ¡Describe Tu Alojamiento!
         </h3>
-        <form action="" id="form" className="form applicationFormContainer1">
+        <form action="" id="form" className="form applicationFormContainer1" encType="multipart/form-data">
           {/*input para politica y privacidad */}
           <label className="">
             <h5 className="applicationFormContainer-tittle">

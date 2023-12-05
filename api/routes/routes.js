@@ -6,7 +6,7 @@ import { userRouter } from "./user.routes.js";
 
 const router = express();
 
-router.use(authRouter)
+router.use("/auth", authRouter)
 
 router.use(routerAloj);
 

@@ -1,7 +1,7 @@
 import { env } from "../config/config"
 
 //eesta funcion"fethAlojamiento toma 3 parametros "route""ruta de la api)" "method"(metodo htttp) y "payload"(cuerpo d ela solicitud pot o put )
-export const fetchAlojamiento = async (route, method ,payload) => {
+export const fetchAlojamiento = async (route, method ,payload, image) => {
     //construccion de la url
   const url = `${env.SERVER_PATH}/${route}`; //conbina la url del servidor con la ruta especifica del alojamiento para obtener la url completa
 //creo un switch para manejar los diferentes metodos http"GET, PUT, POST,DELETE"
@@ -21,12 +21,19 @@ export const fetchAlojamiento = async (route, method ,payload) => {
 
     case "POST":
       try {
+        const properties = Object.keys(payload);
+
+        const alquiler = new FormData()
+
+        properties.forEach((property) => {
+          alquiler.append(property, payload[property])
+        })
+
+        alquiler.append("filename", image)
+
         const response = await fetch(url, {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
+          body: alquiler,
         });
         const data = await response.json();
         return data;

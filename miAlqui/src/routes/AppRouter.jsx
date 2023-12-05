@@ -12,6 +12,9 @@ import { PrivateRoutes } from "./PrivateRoutes";
 import { RegisterPage } from "../pages/registerUser/RegisterPages";
 import LoginPage from "../pages/loginUser/LoginPages";
 import MainRoutes from "./UserMainRoutes";
+import { HomePage } from "../pages/pagPersonalizadaUser/HomePage";
+import { AboutPage } from "../pages/pagPersonalizadaUser/AboutPage";
+import { ChatPage } from "../pages/pagPersonalizadaUser/ChatPage";
 
 export const AppRouter = ()=>{
    const { login, logout, authState } = useContext(AuthContext);
@@ -42,6 +45,10 @@ export const AppRouter = ()=>{
         <Route path='auth/register' element={<PublicRoutes><RegisterPage/> </PublicRoutes>} />
         <Route path='auth/login' element={<PublicRoutes><LoginPage/> </PublicRoutes>} />
         <Route path='/AdminUser' element={<PrivateRoutes><MainRoutes/> </PrivateRoutes>} />
+        <Route path="/AdminUser/home" element={<HomePage />} />
+        <Route path="/AdminUser/about" element={<AboutPage />} />
+        <Route path="/AdminUser/chat" element={<ChatPage />} />
+        <Route path="/AdminUser/" element={<HomePage/>} />
         <Route path='*' element={<h1>404</h1>} />
       </Routes>
     

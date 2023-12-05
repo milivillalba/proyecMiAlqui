@@ -34,15 +34,15 @@ export const Main = () => {
       <Header />
 
       <main className="px-3">
-        <div class="textos-hero lead ">
+        <div className="textos-hero lead ">
           {/* width="40%" height="40%" */}
           <h1 className="tex-aling">
             <span className="tex-1 tex-color">Tu nuevo Hogar</span>
             <span className="tex-1 tex-color">te esta Esperando</span>
-            <img src="/img/background-image.webp" alt="" class=" imagen " />
+            <img src="/img/background-image.webp" alt="" className=" imagen " />
           </h1>
           <span>
-            <p class="parrafo tex-color">
+            <p className="parrafo tex-color">
               Tenemos la Mejor Selecion de Alquileres para ti
             </p>
           </span>
@@ -54,7 +54,7 @@ export const Main = () => {
               className="btn boton-color  iRCgEU"
               data-toggle="button"
               aria-pressed="false"
-              autocomplete="off"
+              autoComplete="off"
             >
               Alquilar
             </button>
@@ -65,7 +65,7 @@ export const Main = () => {
               className="btn boton-color-2  iRCgEU-2"
               data-toggle="button"
               aria-pressed="false"
-              autocomplete="off"
+              autoComplete="off"
               href="/Public/publicar/publicar.html"
             >
               Publicar
@@ -77,13 +77,13 @@ export const Main = () => {
               className="btn  boton-popular gDqqEM"
               data-toggle="button  "
               aria-pressed="false"
-              autocomplete="off "
+              autoComplete="off "
             >
               Populares
             </button>{" "}
           </a>
           <div className="col-md-4 selecion-alqui">
-            <label for="state" className="form-label">
+            <label htmlFor="state" className="form-label">
               <font className="font-1">
                 <font className="font-1">¿Que quieres alquilar?</font>
               </font>

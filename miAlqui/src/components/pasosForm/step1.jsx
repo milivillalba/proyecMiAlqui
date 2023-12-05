@@ -14,7 +14,7 @@ export const Step1 = () => {
         {stepsCounter()}
         {/*indicando en qué paso del proceso se encuentra el usuario */}
         <h3 className="applicationFormContainer-tittle">Datos Generales</h3>
-        <form action="" id="form" className="form applicationFormContainer">
+        <form action="" id="form" className="form applicationFormContainer" encType="multipart/form-data">
           <label className="Personal">
             <h5>Datos Personales</h5>
           </label>

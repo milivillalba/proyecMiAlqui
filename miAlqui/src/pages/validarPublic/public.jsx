@@ -10,7 +10,7 @@ export const Public = () => {
     <>
       {/* header */}
       <Header />
-      <main class="px-3">
+      <main className="px-3">
         <div className="px-4 py-5 my-5 text-center">
           <img
             className="d-block mx-auto mb-4"

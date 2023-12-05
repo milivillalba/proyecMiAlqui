@@ -84,7 +84,7 @@ export const RegisterPage = () => {
 
           <div className='footerDiv flex'>
              <span className='text-regis'>Tengo una cuenta</span>
-            <Link to= {'/'}>
+            <Link to= {'/auth/login'}>
               <button className='btn-regis'>Login</button>
            </Link>
       </div>

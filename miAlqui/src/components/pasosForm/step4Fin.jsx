@@ -30,10 +30,9 @@ export const Step4 = () => {
         proteccion: step2Data.proteccion,
         lugaresCerca: step2Data.lugaresCerca,
         title: step2Data.title,
-        descripcionTotal: step2Data.descripcionTotal,
-        filename: step3Data.filename,
+        descripcionTotal: step2Data.descripcionTotal
       });
-      const responseAloj = await fetchAlojamiento("api/alojamiento", "POST",  { ...step1Data, ...step2Data } );
+      const responseAloj = await fetchAlojamiento("api/alojamiento", "POST",  { ...step1Data, ...step2Data }, step3Data );
       
       //mostra la respuesta
     console.log('Respuesta del servidor',responseAloj);
@@ -57,7 +56,7 @@ export const Step4 = () => {
 };
 
   return (
-    <form onSubmit={handleButtonClick}>
+    <form onSubmit={handleButtonClick} encType="multipart/form-data">
      
       <h3 className="applicationFormContainer-tittle">Confirmar y Enviar</h3>
       {/* Muestra los datos anteriores para confirmación */}

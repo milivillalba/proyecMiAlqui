@@ -41,6 +41,7 @@ export const signin = async (req, res) => {
 
 export const signup = async (req, res) => {
   try {
+    console.log(req.body);
     req.body.password = bcrypt.hashSync(req.body.password, 10);
     const newUser = new UserModel(req.body);
     const user = await newUser.save();

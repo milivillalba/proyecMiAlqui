@@ -4,7 +4,7 @@ import { useFormContext } from "../../context/FormContext";
 
 export const Step3 = () => {
   
-  const { step1Data, step2Data,step3Data, nextStep, prevStep, stepsCounter } =
+  const { step1Data, step2Data,step3Data, nextStep, prevStep, stepsCounter, setStep3Data } =
     useFormContext();
     
   console.log(step1Data, step2Data);
@@ -63,15 +63,14 @@ export const Step3 = () => {
             className="imput-img"
             type="file"
             name="filename"
-            value={step3Data.filename}
             onChange={
-              uploadItem
+              (e) => setStep3Data(e.target.files[0])
             }
             ref={(input) => setImageInput(input)}
             multiple
           />
           <div className="imgContainer">
-            {!files.length ? (
+            {/* {!files.length ? (
               <img src={noImage} alt="No Image" />
             ) : (
               files.map((obj, index) => (
@@ -82,7 +81,7 @@ export const Step3 = () => {
                   </button>
                 </div>
               ))
-            )}
+            )} */}
           </div>
           <hr />
           <hr />

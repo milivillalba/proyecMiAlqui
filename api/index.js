@@ -29,7 +29,7 @@ import { environments } from "./conf/environments.js";
 import { sequelize } from "./conf/db.js";
 import { router } from "./routes/routes.js";
 import { validarJWTWebsocket } from "./middlewares/validar-jwt.js"
-import { listarUsuarios, mensajePersonal, usuarioConectado, usuarioDesconectado } from './controllers/sockets.controller.js';
+import { usuarioConectado, usuarioDesconectado } from './controllers/sockets.controller.js';
 
 // Aumenta el límite de oyentes para evitar la advertencia
 import { EventEmitter } from 'events';
@@ -40,6 +40,7 @@ EventEmitter.defaultMaxListeners = 15;
 app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
+app.use(express.urlencoded({ extended: true }));
 app.use(
   fileUpload({
     createParentPath: true,
@@ -108,28 +109,31 @@ io.on('connection', async (socket) => {
   socket.join(socket.uid);
   
   // Agregar el usuario conectado a la lista de usuarios
-  io.emit('list-users', await listarUsuarios());
+  // io.emit('list-users', await listarUsuarios());
 
   // Escuchar cuando el cliente envía un mensaje personal
-  socket.on('mensaje-personal', async (payload) => {
-    const msg = await mensajePersonal(payload);
-    io.to(payload.to).emit('mensaje-personal', msg);
-  });
+  // socket.on('mensaje-personal', async (payload) => {
+  //   const msg = await mensajePersonal(payload);
+  //   io.to(payload.to).emit('mensaje-personal', msg);
+  // });
 
   // Escuchar cuando el cliente envía un nuevo mensaje
-  socket.on('new-message', (data) => {
-    io.emit('new-message', data);
-  });
+  // socket.on('new-message', (data) => {
+  //   io.emit('new-message', data);
+  // });
 
   // Manejar la desconexión del usuario
   socket.on('disconnect', async () => {
     const user = await usuarioDesconectado(socket.uid);
-    io.emit('list-users', await listarUsuarios());
+    // io.emit('list-users', await listarUsuarios());
     console.log('Usuario desconectado:', user.username);
   });
 });
 
+import { connectDB } from "./relacion.js"
+
 // Servidor en escucha de peticiones
 httpServer.listen(environments.PORT, async () => {
+  connectDB()
   console.log(`server on port ${environments.PORT}`);
 });

@@ -29,22 +29,32 @@ export const CtrlCreateAlojamiento = async (req, res) => {
     proteccion,
     lugaresCerca,
     title,
-    descripcionTotal,
-    
-    
+    descripcionTotal
   } = req.body;
 
   
   try {
     
-    // const file = req.files.filename;
+    const file = req.files.filename;
 
     // Validar si el archivo existe
-    // if (!file) {
-    //   throw {
-    //     message: "Archivo no encontrado en la solicitud"
-    //   };
-    // }
+    if (!file) {
+      throw {
+        message: "Archivo no encontrado en la solicitud"
+      };
+    }
+    let path = `src/Archivos/${file.name}`;//la variable path contien una ruta de archivo que compone "src/Archivo" y el nombre del archivo( osea de la imagen )"file.name"
+    
+    //Mover el archivo a la ruta especificada
+    file.mv(path, (err) => {
+      if (err) {
+        return res.status(500).json({
+          msg: "Error al subir el archivo",
+          error: err.message
+        });
+      }
+      console.log("archivo subido");
+    })
     //se crea una nueva publicacion del alojamiento
     const NewpublicacionAlojamiento = await AlojamientoModel.create({
       //asignar las llaves foraneas
@@ -66,35 +76,22 @@ export const CtrlCreateAlojamiento = async (req, res) => {
       lugaresSercanos: lugaresCerca,
       tituloAlojamiento: title,
       descripcion: descripcionTotal,
-      // converImage: file.name,
+      converImage: path
     });
     if (!NewpublicacionAlojamiento) {
       return res.status(500).json({
         msg: "Error al crear el alojamiento",
       });
     };
-   
-   
-    // let path = `src/Archivos/${file.name}`;//la variable path contien una ruta de archivo que compone "src/Archivo" y el nombre del archivo( osea de la imagen )"file.name"
-    
-    // Mover el archivo a la ruta especificada
-    // file.mv(path, (err) => {
-    //   if (err) {
-    //     return res.status(500).json({
-    //       msg: "Error al subir el archivo",
-    //       error: err.message
-    //     });
-    //   }
 
-    //   console.log("archivo subido");
+
       
 
-    //   // Envía la respuesta después de subir el archivo
-    //   res.json({
-    //     msg: "Se publicó el alojamiento correctamente",
-    //     NewpublicacionAlojamiento,
-    //   });
-    // });
+      // Envía la respuesta después de subir el archivo
+      res.status(201).json({
+        msg: "Se publicó el alojamiento correctamente",
+        NewpublicacionAlojamiento,
+      });
 
   } catch (error) {
     console.log(error);

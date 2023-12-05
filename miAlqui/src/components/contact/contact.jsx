@@ -81,7 +81,7 @@ inputs.forEach((input) => {
             </div>
             <div className="information">
             {/* Los iconos tienen su formato react */}
-            <FontAwesomeIcon icon={faEnvelope} class="icon"/>
+            <FontAwesomeIcon icon={faEnvelope} className="icon"/>
                 <p>miAlqui@gmail.com</p>
             </div>
         </div>
@@ -96,17 +96,17 @@ inputs.forEach((input) => {
             <h3 className="title">Contáctanos</h3>
             <div className="input-container">
                 <input type="text" name="user_name" className="input" required/>
-                <label for="">Nombre completo</label>
+                <label htmlFor="">Nombre completo</label>
                 <span>Nombre completo</span>
             </div>
             <div className="input-container">
                 <input type="email" name="subject" className="input" required/>
-                <label for="">Correo electrónico</label>
+                <label htmlFor="">Correo electrónico</label>
                 <span>Correo electrónico</span>
             </div>
             <div classNÇ="input-container textarea">
                 <textarea name="message" cols="30" rows="10" className="input"></textarea>
-                <label for="">Asunto</label>
+                <label htmlFor="">Asunto</label>
                 <span>Asunto</span>
             </div>
             <input type="submit" value="Enviar" className="btn-conta"/>

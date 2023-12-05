@@ -20,10 +20,7 @@ const MainRoutes = () => {
       <Navbar />
       <BackAndForward />
       <Routes>
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/chat" element={<ChatPage />} />
-        <Route path="/" element={<HomePage/>} />
+        
         
       </Routes>
     </>

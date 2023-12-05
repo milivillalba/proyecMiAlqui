@@ -41,7 +41,7 @@ const LoginPage = () => {
 
       // Se obtiene la última ruta visitada
       const lastPath = localStorage.getItem("lastPath");
-      return navigate(lastPath || "/home");
+      return navigate(lastPath || "/public");
     } else {
       alert(resp.msg);
     }

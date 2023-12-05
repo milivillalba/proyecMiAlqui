@@ -6,13 +6,13 @@ export const Navbar = () => {
   return (
     <nav className="nav nav-masthead justify-content-center float-md-end navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <Link to="/" class="navbar-brand logo tex-color enlace-nav">
+        <Link to="/" className="navbar-brand logo tex-color enlace-nav">
           <h1>
             mi<span>Alqui</span>
           </h1>
         </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavDropdown"
@@ -20,10 +20,10 @@ export const Navbar = () => {
           aria-expanded="true"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse">
-          <ul class="navbar-nav tex-color enlace-nav">
+          <ul className="navbar-nav tex-color enlace-nav">
             <li className="nav-item menu-nav">
               <Link to="/" className="nav-link fw-bold py-1 px-0 active"
                   aria-current="page">
