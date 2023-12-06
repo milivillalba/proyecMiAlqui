@@ -1,62 +1,20 @@
-import { InactiveUser } from "../../components/UserPersonalizado/InactiveUser"
+import { InactiveUser } from "../../components/UserPersonalizado/InactiveUser";
+import { Alojamientos } from "../Alojamientos/Alojamientos";
 
 export const HomePage = () => {
   return (
     <>
-    <InactiveUser />
-    <div className="listadoSection">
+      <InactiveUser />
+      <div className="listadoSection container mt-5">
         <div className="heading flex">
-        <h1>Listado de Paginas</h1>
-        <button className="btn flex">
-            Ver todo {/*Agregar icon */}
-        </button>
+          <h1 className="display-4">Listado de Páginas</h1>
         </div>
-        <ul className="listContainer">
-            <li className="secContainer flex">
-                <div className="singleItem">
-               {/* <AiFillHeart className='icon' />
-             <img src={img} alt="Nombre de la Imagen" /> */}
-            <h3>Departamento</h3>
-                </div>
-            </li>
-            <li className="secContainer flex">
-                <div className="singleItem">
-               {/* <AiFillHeart className='icon' />
-             <img src={img} alt="Nombre de la Imagen" /> */}
-            <h3>Departamento</h3>
-                </div>
-            </li>
-            <li className="secContainer flex">
-                <div className="singleItem">
-               {/* <AiFillHeart className='icon' />
-             <img src={img} alt="Nombre de la Imagen" /> */}
-            <h3>Departamento</h3>
-                </div>
-            </li>
-            <li className="secContainer flex">
-                <div className="singleItem">
-               {/* <AiFillHeart className='icon' />
-             <img src={img} alt="Nombre de la Imagen" /> */}
-            <h3>Departamento</h3>
-                </div>
-            </li>
-            <li className="secContainer flex">
-                <div className="singleItem">
-               {/* <AiFillHeart className='icon' />
-             <img src={img} alt="Nombre de la Imagen" /> */}
-            <h3>Departamento</h3>
-                </div>
-            </li>
-            <li className="secContainer flex">
-                <div className="singleItem">
-               {/* <AiFillHeart className='icon' />
-             <img src={img} alt="Nombre de la Imagen" /> */}
-            <h3>Departamento</h3>
-                </div>
-            </li>
-
-        </ul>
-    </div>
+        <div className="row mt-4">
+          <div className="col-md-8">
+            <Alojamientos />
+          </div>
+        </div>
+      </div>
     </>
-  )
-}
+  );
+};

@@ -25,31 +25,35 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav tex-color enlace-nav">
             <li className="nav-item menu-nav">
-              <Link to="/" className="nav-link fw-bold py-1 px-0 active"
-                  aria-current="page">
-              
-                  Inicio
-               
+              <Link
+                to="/"
+                className="nav-link fw-bold py-1 px-0 active"
+                aria-current="page"
+              >
+                Inicio
               </Link>
             </li>
             <li className="nav-item menu-nav">
-              <Link to="/public" className="nav-link fw-bold py-1 px-0 enlace-nav" >
-                
-                  Publica
-                
+              <Link
+                to="/public"
+                className="nav-link fw-bold py-1 px-0 enlace-nav"
+              >
+                Publica
               </Link>
             </li>
-            <Link to="/Contact" className="nav-link fw-bold py-1 px-0 enlace-nav">
-            
-                Contact
-             
+            <Link
+              to="/Nosostros"
+              className="nav-link fw-bold py-1 px-0 enlace-nav"
+            >
+              Sobre Nosostros
             </Link>
             <li className="nav-item menu-nav">
-              <Link to="/auth/register" className="nav-link fw-bold py-1 px-0 active enlace-nav"
-                  aria-current="page">
-                
-                  Registrate
-               
+              <Link
+                to="/auth/register"
+                className="nav-link fw-bold py-1 px-0 active enlace-nav"
+                aria-current="page"
+              >
+                Registrate
               </Link>
             </li>
 

@@ -37,11 +37,14 @@
   outline: 0px;
   transition: background-color 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
   width: auto;
-  background-color: rgb(252, 4, 68);
+  background-color: rgb(252, 4, 68) !important;
   color: rgb(248, 248, 249) !important;
-  border-color: rgb(252, 4, 68);
+  border-color: rgb(252, 4, 68) !;
   min-height: 50px;
   font-size: 15px;
+}
+.iRCgEU:hover {
+  background-color: rgb(255, 0, 47) (255, 0, 0) !important;
 }
 
 /*boton2*/
@@ -79,7 +82,7 @@
   outline: 0px;
   transition: background-color 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
   width: auto;
-  background-color: rgb(17, 17, 17);
+  background-color: rgb(17, 17, 17) !important;
   color: rgb(248, 248, 249) !important;
   border-color: rgb(17, 17, 17) !important;
   min-height: 50px;
@@ -174,7 +177,7 @@ img {
   max-width: 100%;
 }
 
-h1{
+h1 {
   color: #000000;
 }
 .title {
@@ -183,7 +186,6 @@ h1{
   font-family: Ubuntu, "PT Sans", Verdana, sans-serif;
   letter-spacing: 2px;
   font-size: 25px;
-  
 }
 
 .title span {
@@ -327,4 +329,7 @@ h1{
   max-width: 1200px;
   margin: 0 auto;
   font-family: "Poppins";
+}
+.title h1 {
+  color: #000000;
 }
